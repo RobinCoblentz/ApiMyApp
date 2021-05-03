@@ -68,6 +68,7 @@ module.exports = {
         await doc.updateOne(lng);
         }
         console.log("save")
+          res.send("stop")
     },
 
     //stopjob 
@@ -76,6 +77,7 @@ module.exports = {
         const doc = await User.findOne(phone);
         await doc.updateOne({isinjob: false});
         console.log("stopjob")
+        res.send("stop")
         
     },
     
